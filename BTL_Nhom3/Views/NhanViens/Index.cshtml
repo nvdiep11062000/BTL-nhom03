@@ -5,36 +5,42 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Danh sách nhân viên</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NameNhanVien)
+            <label>ID</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Address)
+            <label>Họ và tên</label>
         </th>
-        <th></th>
+        <th>
+            <label>Địa chỉ</label>
+        </th>
+       
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NameNhanVien)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IDNhanVien }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IDNhanVien }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDNhanVien })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.IDNhanVien)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NameNhanVien)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.IDNhanVien }) |
+        @Html.ActionLink("Details", "Details", new { id = item.IDNhanVien }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.IDNhanVien })
+    </td>
+</tr>
 }
 
 </table>

@@ -66,11 +66,19 @@ namespace BTL_Nhom3.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IDNhanVien,NameNhanVien,Address")] NhanVien nhanVien)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.NhanViens.Add(nhanVien);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.NhanViens.Add(nhanVien);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "Khoa chinh bi trung,vui long nhap lai.");
+                return View(nhanVien);
             }
 
             return View(nhanVien);

@@ -83,3 +83,4 @@ C:\Users\nvdie\source\repos\BTL_Nhom3\BTL_Nhom3\obj\Debug\BTL_Nhom3.dll
 C:\Users\nvdie\source\repos\BTL_Nhom3\BTL_Nhom3\obj\Debug\BTL_Nhom3.pdb
 C:\Users\nvdie\source\repos\BTL_Nhom3\BTL_Nhom3\obj\Debug\BTL_Nhom3.Migrations.Create_Table_Nhanvien.resources
 C:\Users\nvdie\source\repos\BTL_Nhom3\BTL_Nhom3\obj\Debug\BTL_Nhom3.csproj.GenerateResource.cache
+C:\Users\nvdie\source\repos\BTL_Nhom3\BTL_Nhom3\obj\Debug\BTL_Nhom3.Migrations.Create_Table_Sanpham.resources

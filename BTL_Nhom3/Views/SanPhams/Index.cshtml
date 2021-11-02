@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BTL_Nhom3.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>ID</label>
+        </th>
+        <th>
+            <label>Tên sản phẩm</label>
+        </th>
+        <th>
+            <label>Tình trạng</label>
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.IDSanPham)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenSanPham)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.IDSanPham }) |
+        @Html.ActionLink("Details", "Details", new { id = item.IDSanPham }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.IDSanPham })
+    </td>
+</tr>
+}
+
+</table>

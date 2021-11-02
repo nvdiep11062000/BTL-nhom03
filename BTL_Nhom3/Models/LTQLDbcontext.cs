@@ -13,6 +13,8 @@ namespace BTL_Nhom3.Models
         }
 
         public virtual DbSet<NhanVien> NhanViens { get; set; }
+        public virtual DbSet<SanPham> SanPhams { get; set; }
+       // public virtual DbSet<Person> Persons { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
